@@ -62,7 +62,7 @@ Item capture uses Google Gemini AI to read tooltip stats. You need a free API ke
 2. Click **Get API Key → Create API key**
 3. Copy the key and paste it into D2R Buddy's setup dialog, or **Settings → Update API Key**
 
-> **Free tier:** ~250 captures/day at no cost — more than enough for normal play sessions.
+> **Free tier:** About 250 captures/day at no cost — more than enough for normal play sessions.
 > Exceeding this may incur small charges (~$0.001/capture). You are responsible for your own API usage.
 
 ---
@@ -74,21 +74,78 @@ Item capture uses Google Gemini AI to read tooltip stats. You need a free API ke
 Press `Ctrl+Alt+C` while hovering over any item tooltip. A selection overlay appears — drag to select the tooltip, then press `Enter` to confirm.
 
 **The most important rule: keep your selection tight.**
+AI reads everything in the selection box. Extra UI, chat, inventory background, and empty space all reduce accuracy. Select only the tooltip text.
 
-| ✕ Bad | ✓ Good |
-|---|---|
-| Large selection including stash UI, inventory panel, background | Tight selection around only the tooltip text |
-| AI has to guess which text belongs to the item | Clean read, accurate stats every time |
+<table>
+<tr>
+<th>✕ Bad — Selection too large</th>
+<th>✓ Good — Tight around tooltip only</th>
+</tr>
+<tr>
+<td><img src="images/capture_bad_item.png" alt="Bad item capture" width="420"/></td>
+<td><img src="images/capture_good_item.png" alt="Good item capture" width="420"/></td>
+</tr>
+<tr>
+<td>Includes the stash window, inventory panel, and background. AI has to guess which text belongs to the item and may misread stats.</td>
+<td>Tight around only the tooltip. Clean background, all stat lines visible. AI reads this accurately every time.</td>
+</tr>
+</table>
 
-D2R Buddy tries to auto-detect the tooltip border when the overlay opens. If the yellow box appears in the right place, just press `Enter` straight away.
+> **Tip:** D2R Buddy tries to auto-detect the tooltip border when the overlay opens. If the yellow box appears in the right place, just press `Enter` straight away — no dragging needed.
 
-### Special Tabs (Gems / Runes / Materials)
+---
 
-Open the corresponding stash tab in D2R, press `Ctrl+Alt+C`, then drag to select the **entire grid** — not individual items.
+### Special Tabs — Gems, Runes & Materials
 
-**Tips:**
-- Exclude the chat box, game messages, and any UI outside the stash grid
-- Tighter is always better — extra content reduces accuracy
+Open the matching stash tab in D2R, press `Ctrl+Alt+C`, then drag to select the **entire stash grid** — not individual items.
+
+#### Runes
+
+<table>
+<tr>
+<th>✕ Bad — Too much selected</th>
+<th>✓ Good — Rune grid only</th>
+</tr>
+<tr>
+<td><img src="images/capture_bad_runes.png" alt="Bad rune capture" width="420"/></td>
+<td><img src="images/capture_good_runes.png" alt="Good rune capture" width="420"/></td>
+</tr>
+<tr>
+<td>Includes the chat box, game messages, and empty stash rows. Confuses the AI and may cause incorrect rune counts.</td>
+<td>Only the rune grid. No chat, no empty rows, no inventory panel. Clean and accurate.</td>
+</tr>
+</table>
+
+#### Gems
+
+<table>
+<tr>
+<th>✓ Good — Gem grid only</th>
+</tr>
+<tr>
+<td><img src="images/capture_good_gems.png" alt="Good gem capture" width="420"/></td>
+</tr>
+<tr>
+<td>Select just the gem grid including the bottom row with counts visible. Exclude the cube socket area below.</td>
+</tr>
+</table>
+
+#### Materials
+
+<table>
+<tr>
+<th>✓ Good — Materials grid only</th>
+</tr>
+<tr>
+<td><img src="images/capture_good_materials.png" alt="Good materials capture" width="420"/></td>
+</tr>
+<tr>
+<td>Select the full materials grid including item icons and stack counts. Exclude the Horadric Cube and empty space below.</td>
+</tr>
+</table>
+
+
+---
 
 ---
 
@@ -136,6 +193,10 @@ This is a free community app built for the D2R community. If you find it useful:
 ---
 
 ## Changelog
+
+### v0.1.9
+- Initial Public Release
+- Fix for database link not updating with version updates under specific circumstances
 
 ### v0.1.8
 - Fixed database persistence across updates — data now survives version upgrades
