@@ -13,7 +13,11 @@
 [![License](https://img.shields.io/badge/license-Free%20%E2%80%94%20Personal%20Use-c8a840?style=flat-square&labelColor=0d0d18)](../../)
 
 </div>
-
+<div align="center">
+<img src="images/D2R Buddy SS1.png" alt="D2R Buddy Screenshot 1" width="800"/>
+<br/><br/>
+<img src="images/D2R Buddy SS2.png" alt="D2R Buddy Screenshot 2" width="800"/>
+</div>
 ---
 
 ## What is D2R Buddy?
