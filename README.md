@@ -22,7 +22,7 @@
 
 ## What is D2R Buddy?
 
-D2R Buddy is a free Windows companion app that sits alongside D2R and handles the tracking and management work that nobody wants to do manually — without reading game memory or breaking Blizzard's Terms of Service.
+D2R Buddy is a free Windows companion app that sits alongside D2R and handles the tracking and management work that nobody wants to do manually without reading game memory or breaking Blizzard's Terms of Service.
 
 It works by taking a screenshot of your item tooltip when you press a hotkey, then using Google's Gemini AI (can use the free tier) to read the stats automatically. Everything is stored locally on your machine.
 
@@ -36,13 +36,13 @@ It works by taking a screenshot of your item tooltip when you press a hotkey, th
 |---|---|
 | **AI Item Capture** | Press `Ctrl+Alt+C` over any tooltip. Stats are read automatically and stored per character and stash tab |
 | **Multi-Account Tracking** | Track multiple accounts, characters, and all stash tabs (Inventory, Personal, Shared 1–5) |
-| **Gems / Runes / Materials** | Dedicated tabs scanned by drag-selecting your stash grid — no individual captures needed |
+| **Gems / Runes / Materials** | Dedicated tabs scanned by drag-selecting your stash grid no individual captures needed |
 | **Rune Calculator** | See which runewords you can build now, including cascaded cube upgrades |
 | **Run Log** | Track farming runs by location with session and total counters |
 | **Herald Kills** | Track Herald of the Endgame tier kills (T1–T5) |
 | **Character Tracker** | Larzuk, Hellforge, and Bumper quest status per difficulty across all characters |
 | **All Items View** | Search every captured item across all accounts in one list. Jump to its stash tab instantly |
-| **Goals Panel** | Running to-do list for runewords, sets, trades — check them off as you go |
+| **Goals Panel** | Running to-do list for runewords, sets, trades check them off as you go |
 | **Auto-Updates** | Updates automatically in the background |
 
 ---
@@ -50,7 +50,7 @@ It works by taking a screenshot of your item tooltip when you press a hotkey, th
 ## Installation
 
 1. Download `D2RBuddy-Setup.exe` from the [latest release](../../releases/latest)
-2. Run the installer — D2R Buddy installs to your user folder (no admin required)
+2. Run the installer D2R Buddy installs to your user folder (no admin required)
 3. On first launch, enter your free Gemini API key when prompted (or skip and add it later)
 4. Add a name for your account and first character, and you're set (no passwords or login required)
 
@@ -66,7 +66,7 @@ Item capture uses Google Gemini AI to read tooltip stats. You need a free API ke
 2. Click **Get API Key → Create API key**
 3. Copy the key and paste it into D2R Buddy's setup dialog, or **Settings → Update API Key**
 
-> **Free tier:** About 250 captures/day at no cost — more than enough for normal play sessions.
+> **Free tier:** About 250 captures/day at no cost more than enough for normal play sessions.
 > Exceeding this may incur small charges (~$0.001/capture). You are responsible for your own API usage.
 
 ---
@@ -75,15 +75,15 @@ Item capture uses Google Gemini AI to read tooltip stats. You need a free API ke
 
 ### Individual Items
 
-Press `Ctrl+Alt+C` while hovering over any item tooltip. A selection overlay appears — drag to select the tooltip, then press `Enter` to confirm.
+Press `Ctrl+Alt+C` while hovering over any item tooltip. A selection overlay appears drag to select the tooltip, then press `Enter` to confirm.
 
 **The most important rule: keep your selection tight.**
 AI reads everything in the selection box. Extra UI, chat, inventory background, and empty space all reduce accuracy. Select only the tooltip text.
 
 <table>
 <tr>
-<th>✕ Bad — Selection too large</th>
-<th>✓ Good — Tight around tooltip only</th>
+<th>✕ Bad Selection too large</th>
+<th>✓ Good Tight around tooltip only</th>
 </tr>
 <tr>
 <td><img src="images/capture_bad_item.png" alt="Bad item capture" width="420"/></td>
@@ -95,20 +95,20 @@ AI reads everything in the selection box. Extra UI, chat, inventory background, 
 </tr>
 </table>
 
-> **Tip:** D2R Buddy tries to auto-detect the tooltip border when the overlay opens. If the yellow box appears in the right place, just press `Enter` straight away — no dragging needed.
+> **Tip:** D2R Buddy tries to auto-detect the tooltip border when the overlay opens. If the yellow box appears in the right place, just press `Enter` straight away no dragging needed.
 
 ---
 
-### Special Tabs — Gems, Runes & Materials
+### Special Tabs Gems, Runes & Materials
 
-Open the matching stash tab in D2R, press `Ctrl+Alt+C`, then drag to select the **entire stash grid** — not individual items.
+Open the matching stash tab in D2R, press `Ctrl+Alt+C`, then drag to select the **entire stash grid** not individual items.
 
 #### Runes
 
 <table>
 <tr>
-<th>✕ Bad — Too much selected</th>
-<th>✓ Good — Rune grid only</th>
+<th>✕ Bad Too much selected</th>
+<th>✓ Good Rune grid only</th>
 </tr>
 <tr>
 <td><img src="images/capture_bad_runes.png" alt="Bad rune capture" width="420"/></td>
@@ -124,7 +124,7 @@ Open the matching stash tab in D2R, press `Ctrl+Alt+C`, then drag to select the 
 
 <table>
 <tr>
-<th>✓ Good — Gem grid only</th>
+<th>✓ Good Gem grid only</th>
 </tr>
 <tr>
 <td><img src="images/capture_good_gems.png" alt="Good gem capture" width="420"/></td>
@@ -138,7 +138,7 @@ Open the matching stash tab in D2R, press `Ctrl+Alt+C`, then drag to select the 
 
 <table>
 <tr>
-<th>✓ Good — Materials grid only</th>
+<th>✓ Good Materials grid only</th>
 </tr>
 <tr>
 <td><img src="images/capture_good_materials.png" alt="Good materials capture" width="420"/></td>
@@ -172,11 +172,11 @@ Yes. D2R Buddy does not read game memory, inject into the process, or automate a
 **Do I need the API key?**
 No. Run tracking, rune calculator, character tracking, goals, and all other features work without it. Only item capture requires the key.
 
-**The capture reads stats incorrectly — what do I do?**
+**The capture reads stats incorrectly what do I do?**
 Make sure your selection is tight around only the tooltip with no extra UI elements. You can also edit any stats in the confirm window before saving.
 
 **Does it work for offline characters?**
-Yes — all features work for offline characters.
+Yes all features work for offline characters.
 
 **Where is my data stored?**
 All data is stored locally in a SQLite database at `%LocalAppData%\D2RBuddy\d2rbuddy.db`. Nothing is sent to any server except tooltip images to Google Gemini during item capture.
@@ -190,8 +190,8 @@ No. Your database is stored in a permanent location outside the versioned instal
 
 This is a free community app built for the D2R community. If you find it useful:
 
-- **[☕ Ko-fi](https://ko-fi.com/ihavereturnd)** — completely optional, always appreciated
-- **[💬 d2jsp](https://forums.d2jsp.org/user.php?i=207257)** — bug reports, feedback, suggestions
+- **[☕ Ko-fi](https://ko-fi.com/ihavereturnd)** completely optional, always appreciated
+- **[💬 d2jsp](https://forums.d2jsp.org/user.php?i=207257)** bug reports, feedback, suggestions
 - **Open an issue** on this repo for bugs or feature requests
 
 ---
@@ -203,12 +203,12 @@ This is a free community app built for the D2R community. If you find it useful:
 - Fix for database link not updating with version updates under specific circumstances
 
 ### v0.1.8
-- Fixed database persistence across updates — data now survives version upgrades
+- Fixed database persistence across updates data now survives version upgrades
 - Fixed first-run tour and API key prompt appearing again after updates
 - Added DOCS tab with capture guide and screenshot examples
 - Added version number display in top-left of app
-- OCR mode removed — AI Vision is now the only capture mode (higher accuracy, works at any resolution)
-- Skip option added to API key setup — all non-capture features usable without a key
+- OCR mode removed AI Vision is now the only capture mode (higher accuracy, works at any resolution)
+- Skip option added to API key setup all non-capture features usable without a key
 - Fixed guided tour overlay appearing over other apps when D2R Buddy is minimized
 - Fixed rare crash when resizing the window during the first-run tour
 
