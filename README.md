@@ -9,7 +9,6 @@
 ---
 
 [⬇ Download Latest Release](https://github.com/KyleBishop/D2RBuddy-Releases/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/KyleBishop/D2RBuddy-Releases/total?style=flat-square&color=c8a840&labelColor=0d0d18&cacheSeconds=60)](https://github.com/KyleBishop/D2RBuddy-Releases/releases)
 [![License](https://img.shields.io/badge/license-Free%20%E2%80%94%20Personal%20Use-c8a840?style=flat-square&labelColor=0d0d18)](../../)
 
 </div>
